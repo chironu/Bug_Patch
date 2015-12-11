@@ -157,11 +157,18 @@ $p_chk=array();
 $time=0;
 echo "<table>";
 echo "<tr><th>No</th><th>Input<br>Bug</th><th>Output</th><th>patch</th><th>Time</th></tr>";
+//while(true)
 while(true)
 {
 $p_old=$p_old;
 $bug1=$bug1;
 $patch=$patch;
+if($bug1=="0")
+	{
+	echo "<tr><td colspan=5><hr>Bugs cannot fixed.<hr></td></tr>";
+	exit();
+	}
+
 $dd_chk=patch_bug($p_old,$bug1,$patch);
 if(!$dd_chk)
 	{
@@ -178,6 +185,7 @@ $re_data=explode(" ",$dd_chk[$l]);
 if (in_array($re_data[3], $p_chk)){
 //echo "(ซ้ำ)";
 //echo print_r($re_data)."<hr>";
+$bug1="0";
 }
 else
 		{
