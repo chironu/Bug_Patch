@@ -61,6 +61,9 @@ return false;
 <?
 $input_bug=$_POST[input_bug];
 $input_patch=$_POST[input_patch];
+if($input_bug=="")$input_bug=3; //test1
+if($input_patch=="")$input_patch=3;//test1
+
 ?>
 <form action="?" method="post" enctype="multipart/form-data" onsubmit="return chk_post();">
     Input Bug:
