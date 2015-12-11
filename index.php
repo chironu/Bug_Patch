@@ -35,7 +35,9 @@ th {
 </style>
 <script>
 window.onload = function() {
+var dd=document.getElementById("input_bug").value;
 document.getElementById("input_bug").focus();
+document.getElementById("input_bug").value=dd;
 }
 
 function chk_post()
